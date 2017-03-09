@@ -1,0 +1,3 @@
+library(BiocInstaller)
+
+biocLite("devtools")
