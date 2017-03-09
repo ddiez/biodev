@@ -4,6 +4,7 @@ biocLite("devtools")
 biocLite("tidyverse")
 biocLite("ggraph")
 
-biocLite("q3tools")
-biocLite("motiftools")
-biocLite("ngstools")
+# from github ddiez repository.
+biocLite("ddiez/q3tools")
+biocLite("ddiez/motiftools")
+biocLite("ddiez/ngstools")
