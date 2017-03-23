@@ -8,7 +8,7 @@ RUN R -f /tmp/install.R
 RUN apt-get update
 
 ## Add requirementes for R packages
-RUN apt-get install -y autoconf
+RUN apt-get install -y autoconf libudunits2-dev
 
 ## Add samtools
 RUN apt-get install -y samtools
