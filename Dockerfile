@@ -7,6 +7,9 @@ RUN R -f /tmp/install.R
 # Update the repository sources list
 RUN apt-get update
 
+## Add requirementes for R packages
+RUN apt-get install -y autoconf
+
 ## Add samtools
 RUN apt-get install -y samtools
 
