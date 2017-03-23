@@ -1,9 +1,6 @@
 FROM bioconductor/release_core2
 MAINTAINER Diego Diez <diego10ruiz@gmail.com>
 
-ADD install.R /tmp/
-RUN R -f /tmp/install.R
-
 # Update the repository sources list
 RUN apt-get update
 
@@ -29,3 +26,6 @@ RUN cd /tmp/MACS && python setup.py install
 # Cleanup
 RUN apt-get clean
 RUN rm -rf /tmp/MACS
+## Install R packages.
+ADD install.R /tmp/
+RUN R -f /tmp/install.R
