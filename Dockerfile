@@ -10,7 +10,7 @@ RUN apt-get update
 ## Add general tools.
 RUN apt-get install -y build-essential git python python-dev
 
-## Add requirementes for R packages
+## Add requirements for R packages
 RUN apt-get install -y autoconf libudunits2-dev
 
 ## Add samtools
