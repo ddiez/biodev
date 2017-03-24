@@ -27,6 +27,19 @@ RUN cd /tmp/MACS && python setup.py install
 RUN apt-get clean
 RUN rm -rf /tmp/MACS
 
+## Install MEME suite.
+# Download and untar.
+ADD http://meme-suite.org/meme-software/4.11.3/meme_4.11.3_1.tar.gz /tmp
+WORKDIR /tmp
+RUN tar zxvf meme_4.11.3.tar.gz
+WORKDIR /tmp/meme_4.11.3
+
+# Compile.
+RUN ./configure
+RUN make
+RUN make test
+RUN make install
+
 ## Install R packages.
 ADD install.R /tmp/
 RUN R -f /tmp/install.R
