@@ -37,7 +37,7 @@ RUN tar zxvf meme_4.11.3_1.tar.gz
 WORKDIR /tmp/meme_4.11.3
 
 # Compile.
-RUN ./configure
+RUN ./configure --prefix /opt
 RUN make
 RUN make test
 RUN make install
