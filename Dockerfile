@@ -45,6 +45,9 @@ RUN make install
 # Cleanup.
 RUN rm -rf /tmp/meme_4.11.3
 
+# Add /opt/bin to PATH.
+ENV PATH /opt/bin:$PATH
+
 ## Install R packages.
 ADD install.R /tmp/
 RUN R -f /tmp/install.R
