@@ -39,7 +39,7 @@ WORKDIR /tmp/meme_4.11.3
 # Compile.
 RUN ./configure --prefix /opt
 RUN make
-RUN make test
+#RUN make test
 RUN make install
 
 # Cleanup.
