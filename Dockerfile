@@ -40,6 +40,9 @@ RUN make
 RUN make test
 RUN make install
 
+# Cleanup.
+RUN rm -rf /tmp/meme_4.11.3
+
 ## Install R packages.
 ADD install.R /tmp/
 RUN R -f /tmp/install.R
