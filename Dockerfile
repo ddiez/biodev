@@ -6,8 +6,9 @@ RUN apt-get update
 
 ## Add general tools.
 RUN apt-get install -y build-essential git python python-dev
-RUN apt-get install -y libopenmpi-dev openmpi-bin libxml2-dev libxslt1-dev
-RUN apt-get install -y ghostscript autoconf
+RUN apt-get install -y autoconf
+RUN apt-get install -y libopenmpi-dev openmpi-bin ssh
+RUN apt-get install -y libxml2-dev libxslt1-dev ghostscript
 
 ## Add requirements for R packages.
 RUN apt-get install -y libudunits2-dev
