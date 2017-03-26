@@ -38,7 +38,7 @@ RUN tar zxvf meme_4.11.3_1.tar.gz
 WORKDIR /tmp/meme_4.11.3
 
 # Compile.
-RUN ./configure --prefix /opt --enable-build-libxml2 --enable-build-libxslt --with-url=http://meme-suite.org
+RUN ./configure --prefix /opt
 RUN make
 #RUN make test
 RUN make install
