@@ -33,15 +33,13 @@ RUN rm -rf /tmp/MACS
 ## Install MEME suite.
 # Download and untar.
 ADD http://meme-suite.org/meme-software/4.11.3/meme_4.11.3_1.tar.gz /tmp
-RUN cd /tmp
-RUN tar zxvf meme_4.11.3_1.tar.gz
+RUN cd /tmp && tar zxvf meme_4.11.3_1.tar.gz
 
 # Compile.
-RUN cd /tmp/meme_4.11.3
-RUN ./configure --prefix /opt
-RUN make
+RUN cd /tmp/meme_4.11.3 && ./configure --prefix /opt
+RUN cd /tmp/meme_4.11.3 && make
 #RUN make test
-RUN make install
+RUN cd /tmp/meme_4.11.3 && make install
 
 # Cleanup.
 RUN cd /tmp
